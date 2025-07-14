@@ -1,0 +1,197 @@
+<!--
+  ==============================================================================
+  Copyright (c) 2025 NaiCharal (南奈岭)
+  
+  Licensed under MIT License with Personal Information Protection Appendix
+  Full license available at: https://github.com/NaiCharal/SC-SFP/LICENSE
+  
+  Author's Profile:
+  • Bilibili: https://space.bilibili.com/1869914379
+  • GitHub: https://github.com/NaiCharal
+  
+  Personal Introduction: 
+  "I believe that everyone can be innovative. / 我相信每个人都可以创新"
+  ==============================================================================
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>奶猹奶福图库</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="drag-overlay" id="dragOverlay">拖放图片到此处</div>
+  
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="logo-icon">SC</div>
+        <div class="logo-text">
+          <h1>奶猹奶福图库</h1>
+          <p>关于Chara、Frisk一切可以冲的东西都可以存放在里面</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="addAlbumBtn">
+          <span>+</span> 新建图册
+        </button>
+        <button class="btn" id="addPhotoBtn">
+          <span>+</span> 添加图片
+        </button>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <div class="sidebar">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+          <h2>图库结构</h2>
+          <button class="btn" id="manageAlbumsBtn" style="padding: 5px 10px; font-size: 13px;">管理</button>
+        </div>
+        <ul class="gallery-structure" id="albumList"></ul>
+      </div>
+      
+      <div class="gallery-content">
+        <div class="gallery-header">
+          <h2 id="currentAlbum">默认图库</h2>
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索图片...">
+          </div>
+        </div>
+        
+        <div class="gallery-grid" id="photoGrid">
+          <div class="empty-state">
+            <div class="empty-icon">🖼🖼🖼️</div>
+            <h3>当前图库为空</h3>
+            <p>点击"添加图片"按钮或拖放图片到此处</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 新建图册弹窗 -->
+  <div class="modal" id="createAlbumModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>新建图册</h2>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="albumName">图册名称</label>
+          <input type="text" id="albumName" placeholder="请输入图册名称">
+        </div>
+        <div class="form-group">
+          <label for="albumDescription">描述（可选）</label>
+          <input type="text" id="albumDescription" placeholder="请输入图册描述">
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="cancelCreateAlbum">取消</button>
+        <button class="btn" id="confirmCreateAlbum">创建</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 图片预览弹窗 -->
+  <div class="modal" id="imagePreviewModal">
+    <div class="modal-content" style="max-width: 90%; max-height: 90vh;">
+      <div class="modal-header">
+        <h2 id="previewTitle"></h2>
+        <button class="btn btn-outline" id="closePreview">关闭</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between; padding: 15px;">
+        <div id="imageInfo"></div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn" id="renameImageBtn">重命名</button>
+          <button class="btn" id="moveImageBtn">移动</button>
+          <button class="btn" id="deleteImageBtn">删除</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 重命名图片弹窗 -->
+  <div class="modal" id="renameImageModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>重命名图片</h2>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="newImageName">新名称</label>
+          <input type="text" id="newImageName" placeholder="请输入新名称">
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="cancelRenameImage">取消</button>
+        <button class="btn" id="confirmRenameImage">确认</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 移动图片弹窗 -->
+  <div class="modal" id="moveImageModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>移动图片到图册</h2>
+      </div>
+      <div class="modal-body">
+        <div class="move-album-container">
+          <ul class="move-album-list" id="moveAlbumList"></ul>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="cancelMoveImage">取消</button>
+        <button class="btn" id="confirmMoveImage">移动</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 图册管理弹窗 -->
+  <div class="modal" id="manageAlbumsModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>图册管理</h2>
+      </div>
+      <div class="modal-body">
+        <div class="move-album-container">
+          <ul class="move-album-list" id="manageAlbumList"></ul>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" id="renameAlbumBtn">重命名选中</button>
+        <button class="btn" id="deleteAlbumBtn">删除选中</button>
+        <button class="btn btn-outline" id="closeManageAlbums">关闭</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 重命名图册弹窗 -->
+  <div class="modal" id="renameAlbumModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>重命名图册</h2>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="newAlbumName">新名称</label>
+          <input type="text" id="newAlbumName" placeholder="请输入新名称">
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="cancelRenameAlbum">取消</button>
+        <button class="btn" id="confirmRenameAlbum">确认</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="theme-toggle" id="themeToggle">🌙🌙</div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

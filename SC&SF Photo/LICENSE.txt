@@ -1,0 +1,113 @@
+================================================================================
+MIT LICENSE WITH PERSONAL INFORMATION PROTECTION APPENDIX
+================================================================================
+
+MIT License
+
+Copyright (c) 2025 NaiCharal (南奈岭)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+ADDITIONAL TERMS: PERSONAL INFORMATION PROTECTION
+================================================================================
+
+1. AUTHOR IDENTITY PRESERVATION
+   a) The following author information must be preserved verbatim and remain 
+      unmodified in all copies or substantial portions of the Software:
+      - Full Name: NaiCharal (南奈岭)
+      - Profile Links:
+          • Bilibili: https://space.bilibili.com/1869914379
+          • GitHub: https://github.com/NaiCharal
+      - Personal Introduction: 
+          "I believe that everyone can be innovative. / 我相信每个人都可以创新"
+   
+   b) This information must appear in at least one of the following locations:
+      - Software's "About" section or equivalent
+      - Primary documentation file (e.g. README.md)
+      - Source code header in each significant file
+
+2. INTRODUCTION CONTENT PROTECTION
+   a) The Personal Introduction text is expressly defined as Author's 
+      self-composed statement
+   b) Any modification, reinterpretation, or derivative annotation to the 
+      Personal Introduction is strictly prohibited
+   c) The Personal Introduction may only be replicated in its original form
+
+3. COMPLIANCE AND ENFORCEMENT
+   a) Removal or alteration of Author Information constitutes license violation
+   b) Violators must restore complete information within 30 days of notification
+   c) Persistent violation will result in termination of all license rights
+
+4. LEGAL INTERPRETATION
+   a) These Additional Terms supplement the base MIT License
+   b) In case of conflict between language versions, English version prevails
+   c) This license is governed by the laws of the People's Republic of China and 
+      international copyright conventions.
+
+================================================================================
+DIGITAL SIGNATURE & PERPETUAL REFERENCE
+================================================================================
+• License Generated: 2025-07-14 UTC+8
+• License Version: 2.0
+• Permanent Repository: 
+  https://github.com/NaiCharal/SC&SFP/blob/main/LICENSE
+• Author's Digital Signature: NaiCharal@2025
+
+--------------------------------------------------------------------------------
+附加条款：个人信息保护 (中文译本)
+--------------------------------------------------------------------------------
+
+1. 作者身份保护
+   a) 以下作者信息必须在软件的所有副本或实质性部分中完整保留且不得修改：
+      - 姓名：NaiCharal (南奈岭)
+      - 主页链接：
+          • 哔哩哔哩：https://space.bilibili.com/1869914379
+          • GitHub：https://github.com/NaiCharal
+      - 个人简介：
+          "I believe that everyone can be innovative. / 我相信每个人都可以创新"
+   
+   b) 该信息必须出现在至少以下一处位置：
+      - 软件的"关于"部分或同等位置
+      - 主要文档文件（如README.md）
+      - 每个重要源代码文件的头部
+
+2. 简介内容保护
+   a) 个人简介文本明确定义为作者自述内容
+   b) 禁止对个人简介进行任何修改、重新解读或衍生注释
+   c) 个人简介仅允许以原始形式完整复制
+
+3. 合规与执行
+   a) 移除或修改作者信息视为违反许可协议
+   b) 违规者须在收到通知后30天内恢复完整信息
+   c) 持续违规将导致所有授权终止
+
+4. 法律解释
+   a) 本附加条款是对MIT基础协议的补充
+   b) 不同语言版本冲突时以英文版本为准
+   c) 本协议受中华人民共和国法律管辖，并遵循国际版权公约。
+
+================================================================================
+数字签名与永久存证
+================================================================================
+• 协议生成时间：2025年7月14日 UTC+8
+• 协议版本：2.0
+• 永久存储库：
+  https://github.com/NaiCharal/SC&SFP/blob/main/LICENSE
+• 作者数字签名：NaiCharal@2025

@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "奶猹奶福图库",
+  "version": "0.0.0",
+  "description": "关于Chara、Frisk一切可以冲的东西都可以存放在里面",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "奶猹奶福图库"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "downloads"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["assets/images/*"],
+    "matches": ["<all_urls>"]
+  }]
+}

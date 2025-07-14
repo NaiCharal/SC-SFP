@@ -1,0 +1,24 @@
+奶猹猹奶福图库（SC&CFP）/
+├── manifest.json
+├── background.js
+├── content.js
+├── popup.html
+├── popup.js
+├── popup.css
+├── icons/
+│   ├── icon48.png
+│   └── icon128.png
+└── assets/
+    └── images/
+        ├── default_gallery/
+        └── custom_gallery/
+
+文件说明
+​​manifest.json​​ - 扩展配置文件，定义基本信息和权限
+​​background.js​​ - 后台脚本，处理图库数据和上下文菜单
+​​content.js​​ - 内容脚本，处理网页中的图片保存
+​​popup.html​​ - 主界面HTML结构
+​​popup.js​​ - 界面逻辑脚本
+​​popup.css​​ - 界面样式文件
+​​icons/​​ - 扩展图标目录
+​​assets/images/​​ - 图片资源目录
